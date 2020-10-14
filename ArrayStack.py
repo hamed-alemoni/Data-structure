@@ -1,13 +1,14 @@
 import numpy as np
+from Stack import Stack
 
 
-class ArrayStack(object):
+class ArrayStack(Stack):
 
     def __init__(self, capacity=10000):
         self.__t = -1
         self.__data = np.empty(capacity)
 
-    # this method show size of stack
+    # this method shows size of stack
     def size(self):
         return self.__t + 1
 
