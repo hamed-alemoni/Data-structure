@@ -29,3 +29,9 @@ class ArrayStack(Stack):
             return None
         self.__data[self.__t] = None
         self.__t = self.__t - 1
+
+    # this method returns the upon element of the stack
+    def top(self):
+        if self.is_empty():
+            return None
+        return self.__data[self.__t]
