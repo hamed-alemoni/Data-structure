@@ -7,6 +7,10 @@ class SingleLinkedList(object):
         self.__tail: Node = None
         self.__size = 0
 
+    # this method shows the first element of the list
+    def first(self):
+        return self.__head.element
+
     # this method check is list empty or not
     def is_empty(self):
         return self.__size == 0
@@ -47,4 +51,3 @@ class SingleLinkedList(object):
 
         if self.is_empty():
             self.__tail = None
-
