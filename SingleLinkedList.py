@@ -8,7 +8,7 @@ class SingleLinkedList(object):
         self.__size = 0
 
     # this method shows the first element of the list
-    def first(self):
+    def _first(self):
         return self.__head.element
 
     # this method check is list empty or not
@@ -20,7 +20,7 @@ class SingleLinkedList(object):
         return self.__size
 
     # this method add a new node as a new head to the list
-    def add_first(self, element):
+    def _add_first(self, element):
         self.__head = Node(element, self.__head)
         if self.is_empty():
             self.__tail = self.__head
@@ -28,7 +28,7 @@ class SingleLinkedList(object):
         self.__size = self.__size + 1
 
     # this method add a new node as a new tail to the list
-    def add_last(self, element):
+    def _add_last(self, element):
         new_node = Node(element, None)
         if self.is_empty():
             self.__head = new_node
@@ -40,7 +40,7 @@ class SingleLinkedList(object):
         self.__size = self.__size + 1
 
     # this method remove the head of the list
-    def remove_first(self):
+    def _remove_first(self):
         if self.is_empty():
             return None
         new_head = self.__head.next
