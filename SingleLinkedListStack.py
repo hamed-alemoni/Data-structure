@@ -2,22 +2,21 @@ from SingleLinkedList import SingleLinkedList
 from Stack import Stack
 
 
-class SingleLinkedListStack(Stack,SingleLinkedList):
+class SingleLinkedListStack(SingleLinkedList, Stack):
     def __init__(self):
-        pass
-        #super(SingleLinkedListStack, self).__init__()
+        SingleLinkedList.__init__(self)
 
     def pop(self):
-        super(SingleLinkedListStack, self).remove_first()
+        return super().remove_first()
 
     def size(self):
-        super(SingleLinkedListStack, self).size()
+        return super().size()
 
     def is_empty(self):
-        super(SingleLinkedListStack, self).is_empty()
+        return super().is_empty()
 
     def push(self, element):
-        super(SingleLinkedListStack, self).add_first(element)
+        super().add_first(element)
 
     def top(self):
-        super(SingleLinkedListStack, self).first()
+        return super().first()
